@@ -42,10 +42,18 @@ p{margin:0 0 16px;max-width:66ch}
   border-radius:4px;margin:0 0 30px}
 .lede{font-size:1.22rem;line-height:1.6;max-width:44ch}
 
+/* brand marks: one-colour SVGs used as masks, so CSS sets their colour */
+.mark{display:block;background:currentColor;
+  -webkit-mask:var(--src) center/contain no-repeat;mask:var(--src) center/contain no-repeat}
+.mark-lrl{--src:url(assets/lrl-enterprises-mark.svg);color:var(--navy);width:100%;aspect-ratio:370/420}
+.mark-bio{--src:url(assets/lorentz-biotech-mark.svg);color:var(--sky);width:132px;aspect-ratio:370/515;margin-bottom:18px}
+.mark-cos{--src:url(assets/logans-cosmetics-mark.svg);color:var(--crimson);width:150px;aspect-ratio:430/495;margin-bottom:18px}
+.hero{display:grid;grid-template-columns:1fr 250px;gap:48px;align-items:center}
+
 .split{display:grid;grid-template-columns:1.1fr 1fr;margin:5vh 0 12vh;
   border-radius:18px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(14,42,71,.45)}
 .split a{display:block;padding:34px 34px 30px;text-decoration:none;color:inherit}
-.bio{background:var(--navy);color:var(--sky)}
+.split a.bio{background:var(--navy);color:var(--sky)}
 .bio h2{color:var(--white)}
 .cos{background:var(--white)}
 .split h2{font-size:1.7rem;font-weight:700;letter-spacing:-.015em;margin-bottom:8px}
@@ -145,6 +153,10 @@ footer p{max-width:78ch;margin-bottom:10px}
   .wrap{padding:0 18px}
   .path li{padding-left:64px}
   .timeline li{grid-template-columns:1fr;gap:0}
+  .hero{grid-template-columns:1fr;gap:26px}
+  .mark-lrl{width:160px;order:-1}
+  .mark-bio{width:104px}
+  .mark-cos{width:118px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -156,18 +168,23 @@ footer p{max-width:78ch;margin-bottom:10px}
 <main class="wrap">
 
   <header class="hero">
-    <h1>LRL Enterprises<span class="llc">LLC</span></h1>
-    <span class="underline" aria-hidden="true"></span>
-    <p class="lede">A Native American–owned formulation company in Anadarko, Oklahoma. One brand is research working toward topical medicines the right way. The other is cosmetics you can buy.</p>
+    <div class="hero-text">
+      <h1>LRL Enterprises<span class="llc">LLC</span></h1>
+      <span class="underline" aria-hidden="true"></span>
+      <p class="lede">A Native American–owned formulation company in Anadarko, Oklahoma. One brand is research working toward topical medicines the right way. The other is cosmetics you can buy.</p>
+    </div>
+    <span class="mark mark-lrl" role="img" aria-label="LRL Enterprises emblem: the letters LRL growing from a tree with deep roots"></span>
   </header>
 
   <nav class="split" aria-label="Our two brands">
     <a class="bio" href="#biotech">
+      <span class="mark mark-bio" aria-hidden="true"></span>
       <h2>Lorentz Biotechnologies</h2>
       <p class="what">Preclinical research in topical formulation and delivery, for investors, partners and grant programs. Nothing is sold or offered to the public.</p>
       <span class="go">See the research plan</span>
     </a>
     <a class="cos" href="#cosmetics">
+      <span class="mark mark-cos" aria-hidden="true"></span>
       <h2>Logan's Cosmetics</h2>
       <p class="what">Small-batch cosmetics made in Oklahoma. The first product opens on Etsy soon.</p>
       <span class="go">See the products</span>
@@ -255,7 +272,7 @@ footer p{max-width:78ch;margin-bottom:10px}
         <p>Logan's path runs through the trades: computers, then engines, then freight. Every one of them rewards the same habit, finding the fault by measuring instead of guessing, and that is the habit he brings to formulation.</p>
         <div class="service">
           <p class="service-h">A family record of federal service</p>
-          <p>Gunnery Sergeant John Leslie Lorentz, USMC, served two combat tours in Vietnam and earned five Good Conduct Medals, the Vietnam Service Medal and the Presidential Unit Citation. After Explosive Ordnance Disposal and chemical and biological training in 1967, he spent twenty years at Yuma Proving Ground testing weapons for national defense.</p>
+          <p>Logan's uncle, Gunnery Sergeant John Leslie Lorentz, USMC, served two combat tours in Vietnam and earned five Good Conduct Medals, the Vietnam Service Medal and the Presidential Unit Citation. After Explosive Ordnance Disposal and chemical and biological training in 1967, he spent twenty years at Yuma Proving Ground testing weapons for national defense.</p>
         </div>
       </div>
     </div>
