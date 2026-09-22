@@ -44,6 +44,10 @@ ck("no drug, disease or unverifiable claims", not hits, ", ".join(hits))
 
 print("\n=== THINGS THAT MUST NOT BE PUBLISHED ===")
 ck("EIN not on page", "42-4884112" not in html and "424884112" not in html)
+private = [r"convict", r"firearm", r"offense", r"disabilit", r"spinal", r"fusion",
+           r"24-dimension", r"intercept", r"case evaluations", r"\bgpa\b|percentile"]
+phits = sorted({m.group(0) for p in private for m in re.finditer(p, low)})
+ck("no private or unverifiable personal record", not phits, ", ".join(phits))
 ck("no clinical recruitment", not re.search(
     r"enroll(?:ment)? (?:now|today|in (?:a|our|the) (?:study|trial))"
     r"|participate in (?:a|our|the) (?:study|trial)|join (?:a|our|the) (?:study|trial)"

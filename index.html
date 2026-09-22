@@ -105,6 +105,23 @@ p{margin:0 0 16px;max-width:66ch}
 .facts dd{margin:0;font-size:.97rem}
 .founder h3{font-size:1.5rem;font-weight:700;margin-bottom:4px}
 .founder .kin{font-style:italic;color:var(--navy-soft);margin-bottom:16px}
+.service{background:var(--navy);color:var(--sky);border-radius:14px;padding:20px 22px;
+  margin-top:22px;border-top:6px solid var(--marigold)}
+.service p{font-size:.95rem;margin:0}
+.service .service-h{font-family:var(--display);font-weight:700;color:var(--white);
+  font-size:1.08rem;margin-bottom:8px}
+
+.tl-h{font-size:1.5rem;font-weight:700;margin:56px 0 18px}
+.timeline{list-style:none;margin:0;padding:0;border-left:3px solid var(--sky-deep)}
+.timeline li{display:grid;grid-template-columns:6.5em 1fr;gap:18px;padding:0 0 22px 22px;
+  position:relative}
+.timeline li::before{content:"";position:absolute;left:-8px;top:8px;width:13px;height:13px;
+  border-radius:50%;background:var(--sky);border:3px solid var(--navy-soft)}
+.timeline li:last-child::before{background:var(--crimson);border-color:var(--crimson)}
+.timeline .yr{font-family:var(--display);font-weight:700;color:var(--crimson);font-size:.98rem;
+  padding-top:1px}
+.timeline strong{font-family:var(--display);font-size:1.06rem}
+.timeline p{margin:2px 0 0;font-size:.94rem;color:var(--navy-soft)}
 
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
 .contact a{display:block;background:var(--white);border-radius:16px;padding:24px;
@@ -127,6 +144,7 @@ footer p{max-width:78ch;margin-bottom:10px}
   .sec{padding:0 0 9vh}
   .wrap{padding:0 18px}
   .path li{padding-left:64px}
+  .timeline li{grid-template-columns:1fr;gap:0}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -233,10 +251,27 @@ footer p{max-width:78ch;margin-bottom:10px}
       </dl>
       <div class="founder">
         <h3>Logan Royce Lorentz</h3>
-        <p class="kin">Founder. Of the Bointy-Queton Clan of the Kiowa Tribe; enrolled member of the Wichita and Affiliated Tribes.</p>
-        <p>A mechanic and computer technician by trade, Logan brings a diagnostician's habits to formulation: measure first, keep the records, check the arithmetic, and test before making a claim.</p>
+        <p class="kin">Founder and sole member. Of the Bointy-Queton Clan of the Kiowa Tribe; enrolled member of the Wichita and Affiliated Tribes.</p>
+        <p>Logan's path runs through the trades: computers, then engines, then freight. Every one of them rewards the same habit, finding the fault by measuring instead of guessing, and that is the habit he brings to formulation.</p>
+        <div class="service">
+          <p class="service-h">A family record of federal service</p>
+          <p>Gunnery Sergeant John Leslie Lorentz, USMC, served two combat tours in Vietnam and earned five Good Conduct Medals, the Vietnam Service Medal and the Presidential Unit Citation. After Explosive Ordnance Disposal and chemical and biological training in 1967, he spent twenty years at Yuma Proving Ground testing weapons for national defense.</p>
+        </div>
       </div>
     </div>
+
+    <h3 class="tl-h">Work history</h3>
+    <ol class="timeline">
+      <li><span class="yr">2003–04</span><div><strong>Computer repair training</strong><p>PC hardware, diagnostics, component soldering and custom tower builds.</p></div></li>
+      <li><span class="yr">2008</span><div><strong>Automotive technician program</strong><p>Graduated top of class, certified in brakes, steering, suspension and industrial forklift operation.</p></div></li>
+      <li><span class="yr">2009–10</span><div><strong>Shop manager and lead diagnostic mechanic</strong><p>Ran a commercial repair shop: troubleshooting, overhauls, parts and customers.</p></div></li>
+      <li><span class="yr">2010–11</span><div><strong>Independent cleaning contractor</strong><p>Commercial building maintenance under business-to-business contracts.</p></div></li>
+      <li><span class="yr">2012–14</span><div><strong>Philosophy and logic, Tucson</strong><p>College coursework in classical and modern philosophy, formal logic and epistemology.</p></div></li>
+      <li><span class="yr">2014–15</span><div><strong>Class A CDL, Caddo Kiowa Technology Center</strong><p>Graduated top of class in heavy vehicle safety and operation.</p></div></li>
+      <li><span class="yr">2015–18</span><div><strong>Interstate heavy-haul driver</strong><p>Long-haul freight nationwide for Swift, Celadon, CR England and Star Transport.</p></div></li>
+      <li><span class="yr">2019–now</span><div><strong>Independent delivery and logistics</strong><p>Last-mile routes with high customer ratings.</p></div></li>
+      <li><span class="yr">2024–now</span><div><strong>Formulation development</strong><p>Built the UDB v1.0 base and the first cream batches, which became LRL Enterprises.</p></div></li>
+    </ol>
   </section>
 
   <section class="sec" id="contact">
